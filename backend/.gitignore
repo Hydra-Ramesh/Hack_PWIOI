@@ -1,0 +1,52 @@
+# Dependency directories
+node_modules/
+bower_components/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+coverage/
+.vscode/
+*.local
+
+# IDE/editor specific
+*.idea/
+*.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*.lock
+*.log
+
+# Miscellaneous
+*.bak
+*.orig
+
+# Prettier/ESLint cache
+.prettiercache
+.eslintcache
+
+# Ignore test coverage files
+coverage/
+.nyc_output/
+
+# Ignore debugging files
+debug/
