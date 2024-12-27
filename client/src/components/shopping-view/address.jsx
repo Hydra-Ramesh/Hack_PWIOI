@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   addNewAddress,
   deleteAddress,
-  editaAddress,
+  editAddress,
   fetchAllAddresses,
 } from "@/store/shop/address-slice";
 import AddressCard from "./address-card";
@@ -43,7 +43,7 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
 
     currentEditedId !== null
       ? dispatch(
-          editaAddress({
+          editAddress({
             userId: user?.id,
             addressId: currentEditedId,
             formData,

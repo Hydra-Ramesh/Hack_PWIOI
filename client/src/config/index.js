@@ -60,7 +60,7 @@ export const addProductFormElements = [
     options: [
       { id: "men", label: "Men" },
       { id: "women", label: "Women" },
-      { id: "kids", label: "Kids" },
+      { id: "jewellery", label: "Jewellery" },
       { id: "accessories", label: "Accessories" },
       { id: "footwear", label: "Footwear" },
     ],
@@ -123,14 +123,15 @@ export const shoppingViewHeaderMenuItems = [
     path: "/shop/listing",
   },
   {
-    id: "kids",
-    label: "Kids",
-    path: "/shop/listing",
-  },
-  {
     id: "footwear",
     label: "Footwear",
     path: "/shop/listing",
+  },
+  {
+    id: "jewellery",
+    label: "Jewellery",
+    path: "/shop/listing",
+
   },
   {
     id: "accessories",
@@ -147,7 +148,7 @@ export const shoppingViewHeaderMenuItems = [
 export const categoryOptionsMap = {
   men: "Men",
   women: "Women",
-  kids: "Kids",
+  jewellery: "Jewellery",
   accessories: "Accessories",
   footwear: "Footwear",
 };
@@ -165,7 +166,7 @@ export const filterOptions = {
   category: [
     { id: "men", label: "Men" },
     { id: "women", label: "Women" },
-    { id: "kids", label: "Kids" },
+    {id: "jewellery", label: "Jewellery" },
     { id: "accessories", label: "Accessories" },
     { id: "footwear", label: "Footwear" },
   ],

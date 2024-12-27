@@ -53,5 +53,12 @@ app.use("/api/shop/search", shopSearchRouter);
 app.use("/api/shop/review", shopReviewRouter);
 
 app.use("/api/common/feature", commonFeatureRouter);
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
+  });
+}
 
 app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));

@@ -4,7 +4,7 @@ import bannerTwo from "../../assets/banner-2.webp";
 import bannerThree from "../../assets/banner-3.webp";
 import {
   Airplay,
-  BabyIcon,
+  Gem,
   ChevronLeftIcon,
   ChevronRightIcon,
   CloudLightning,
@@ -34,7 +34,7 @@ import { getFeatureImages } from "@/store/common-slice";
 const categoriesWithIcon = [
   { id: "men", label: "Men", icon: ShirtIcon },
   { id: "women", label: "Women", icon: CloudLightning },
-  { id: "kids", label: "Kids", icon: BabyIcon },
+  { id: "jewellery", label: "Jewellery", icon: Gem },
   { id: "accessories", label: "Accessories", icon: WatchIcon },
   { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
 ];

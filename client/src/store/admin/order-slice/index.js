@@ -1,43 +1,40 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+// Dynamically determine the BASE_URL based on the environment
+const BASE_URL =
+  import.meta.env.MODE === "development" ? "http://localhost:8000/api" : "https://your-production-api.com/api";
+
 const initialState = {
   orderList: [],
   orderDetails: null,
 };
 
+// Fetch all orders for admin
 export const getAllOrdersForAdmin = createAsyncThunk(
   "/order/getAllOrdersForAdmin",
   async () => {
-    const response = await axios.get(
-      `http://localhost:8000/api/admin/orders/get`
-    );
-
+    const response = await axios.get(`${BASE_URL}/admin/orders/get`);
     return response.data;
   }
 );
 
+// Fetch order details for admin
 export const getOrderDetailsForAdmin = createAsyncThunk(
   "/order/getOrderDetailsForAdmin",
   async (id) => {
-    const response = await axios.get(
-      `http://localhost:8000/api/admin/orders/details/${id}`
-    );
-
+    const response = await axios.get(`${BASE_URL}/admin/orders/details/${id}`);
     return response.data;
   }
 );
 
+// Update order status
 export const updateOrderStatus = createAsyncThunk(
   "/order/updateOrderStatus",
   async ({ id, orderStatus }) => {
-    const response = await axios.put(
-      `http://localhost:8000/api/admin/orders/update/${id}`,
-      {
-        orderStatus,
-      }
-    );
-
+    const response = await axios.put(`${BASE_URL}/admin/orders/update/${id}`, {
+      orderStatus,
+    });
     return response.data;
   }
 );
@@ -48,7 +45,6 @@ const adminOrderSlice = createSlice({
   reducers: {
     resetOrderDetails: (state) => {
       console.log("resetOrderDetails");
-
       state.orderDetails = null;
     },
   },
