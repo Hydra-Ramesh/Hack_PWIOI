@@ -27,7 +27,7 @@ const PORT = process.env.PORT || 8000;
 // Middleware Setup
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173", // Use environment variable for production
+    origin: process.env.CLIENT_URL || "http://localhost:5175", // Use environment variable for production
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
